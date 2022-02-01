@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'applications.apps.ApplicationsConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +76,20 @@ WSGI_APPLICATION = 'wildhackbackend.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'std_949_wild_hack',
+        'HOST': 'std-mysql',
+        'PORT': '3306',
+        'USER': 'std_949_wild_hack',
+        'PASSWORD': '123456789'
     }
+    
 }
 
 
