@@ -1,11 +1,9 @@
-import email
-from statistics import mode
 from django.db import models
 
 # Create your models here.
 
 class Applications(models.Model):
-    fio = models.CharField(max_length=150, default="Иванов Иван Иванович")
+    fio = models.CharField(max_length=150)
     email = models.CharField(max_length=255)
     birth = models.DateField()
     phone = models.CharField(max_length=20)
